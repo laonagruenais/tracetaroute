@@ -1,10 +1,9 @@
 import React from 'react'
+import { Text } from 'native-base'
 
 function HomeScreen() {
   return (
-    <div>
-      <h1>Home Screen</h1>
-    </div>
+    <Text> HOME SCREEN </Text>
   )
 }
 
