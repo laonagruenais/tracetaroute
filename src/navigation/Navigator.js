@@ -7,8 +7,8 @@ import LoginScreen from '../screens/LoginScreen'
 import RegisterScreen from '../screens/RegisterScreen'
 import HomeScreen from '../screens/HomeScreen'
 import TabBar from './TabBar'
-// import ProfileScreen from '../screens/ProfileScreen'
-// import LinesScreen from '../screens/LinesScreen'
+import SettingsScreen from '../screens/SettingsScreen'
+import ProfileScreen from '../screens/ProfileScreen'
 
 const MainNavigator = createBottomTabNavigator()
 
@@ -37,8 +37,8 @@ function MainTabNavigator() {
       }}
     >
       <MainNavigator.Screen name='Home' options={{ tabBarIcon: 'home' }} component={HomeScreen} />
-      {/* <MainNavigator.Screen name='Lines' options={{ tabBarIcon: 'analytics' }} component={LinesScreen} />
-      <MainNavigator.Screen name='Profile' options={{ tabBarIcon: 'person' }} component={ProfileScreen} /> */}
+      <MainNavigator.Screen name='Settings' options={{ tabBarIcon: 'settings' }} component={SettingsScreen} />
+      <MainNavigator.Screen name='Profile' options={{ tabBarIcon: 'person' }} component={ProfileScreen} />
     </MainNavigator.Navigator>
   )
 }

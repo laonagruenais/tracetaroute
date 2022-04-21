@@ -3,7 +3,7 @@ import { Container, Button, FormControl, Input, WarningOutlineIcon } from 'nativ
 import Icon from 'react-native-vector-icons/Ionicons'
 import { loginStyle } from '../../theme/Styles'
 
-function RegisterForm ({ onRegister }) {
+function RegisterForm({ onRegister }) {
   const [showPassword, setShowPassword] = useState(false)
   const [registrationCredentials, setRegistrationCredentials] = useState({
     username: '',
@@ -20,7 +20,7 @@ function RegisterForm ({ onRegister }) {
   })
 
   return (
-    // top -40px pour ne pas avoir à scroll pour voirl'entiereté de la page
+    // top -40px pour ne pas avoir à scroll pour voir l'entiereté de la page
     <Container w='80%' top='-40px'>
       <FormControl>
         <FormControl.Label>Nom d'utilisateur</FormControl.Label>
@@ -53,11 +53,11 @@ function RegisterForm ({ onRegister }) {
         </FormControl.ErrorMessage>
       </FormControl>
       <FormControl>
-        <FormControl.Label>Adresse email de l'école</FormControl.Label>
+        <FormControl.Label>Adresse email</FormControl.Label>
         <Input
           onChangeText={text => setRegistrationCredentials({ ...registrationCredentials, email: text })}
           value={registrationCredentials.email}
-          placeholder='john.doe@my-digital-school.org'
+          placeholder='john.doe@gmail.com'
         />
         <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon />}>
           Une erreur s'est produite

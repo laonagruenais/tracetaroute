@@ -1,9 +1,38 @@
 import React from 'react'
-import { Text } from 'native-base'
+import { Box, Container, Heading } from 'native-base'
+import ProfilNotCompleteAlert from '../components/alerts/ProfilNotCompleteAlert'
+import { useAuth } from '../contexts/AuthContext'
+import { homeStyle } from '../theme/Styles'
+import _ from 'underscore'
 
-function HomeScreen() {
+function HomeScreen({ navigation }) {
+  const { state } = useAuth()
+
+  const isProfileComplete = () => {
+    return (
+      !_.isEmpty(state.user.phone) &&
+      !_.isEmpty(state.user.school) &&
+      !_.isEmpty(state.user.status) &&
+      !_.isEmpty(state.user.bio)
+    )
+  }
   return (
-    <Text> HOME SCREEN </Text>
+    <>
+      {!isProfileComplete()
+        ? (
+          <ProfilNotCompleteAlert
+            onPressGoProfile={() => navigation.navigate('Profile')}
+          />
+        )
+        : null}
+      <Container w='100%'>
+        <Box style={homeStyle.container}>
+          <Heading style={homeStyle.heading}>
+            Hey! {state.user.firstName} 🤙
+          </Heading>
+        </Box>
+      </Container>
+    </>
   )
 }
 

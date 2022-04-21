@@ -5,7 +5,7 @@ const tabBarStyle = StyleSheet.create({
   container: {
     flexDirection: 'row',
     height: 70,
-    backgroundColor: colors.background,
+    backgroundColor: '#2D3C4B',
     paddingVertical: 10,
     borderTopColor: colors.primary[500],
     borderTopWidth: 1

@@ -1,11 +1,13 @@
-import React from "react";
-import { NativeBaseProvider, NativeBaseConfigProvider, Text } from "native-base";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { AuthProvider } from "./contexts/AuthContext";
-import { getTheme } from './theme/Theme';
-import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
-import Navigator from "./navigation/Navigator";
-import useColorScheme from "react-native/Libraries/Utilities/useColorScheme";
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native'
+import { NativeBaseProvider } from 'native-base'
+import React, { useEffect } from 'react'
+import { SafeAreaView, StatusBar, useColorScheme } from 'react-native'
+
+import { AuthProvider } from './contexts/AuthContext'
+import Navigator from './navigation/Navigator'
+import { getTheme } from './theme/Theme'
+
+
 
 export default function App() {
   const isDarkMode = useColorScheme() === 'dark'
