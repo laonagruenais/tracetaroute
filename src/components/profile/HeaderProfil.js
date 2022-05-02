@@ -1,8 +1,10 @@
 import React from 'react'
-import { Container, Image } from 'native-base'
+import { Container, Image, Text } from 'native-base'
 import { styles } from '../../theme/Profil'
 
-function HeaderProfil () {
+function HeaderProfil() {
+  var yourPicture = require('../../images/photo/photodeprofil.jpg');
+
   return (
     <Container
       style={styles.centerHeader}
@@ -10,10 +12,10 @@ function HeaderProfil () {
       w='100%'
     >
       <Image
-        source={{
-          uri: 'https://wallpaperaccess.com/full/317501.jpg'
-        }} alt='Alternate Text' size='xl' borderRadius={100}
+        source={yourPicture}
+        alt='Alternate Text' size='xl' borderRadius={100}
       />
+      <Text> SALUT </Text>
     </Container>
   )
 }

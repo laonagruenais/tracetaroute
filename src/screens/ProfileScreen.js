@@ -1,8 +1,10 @@
+// import { Image } from 'native-base'
+import { Image } from 'react-native'
 import React from 'react'
 import HeaderProfil from '../components/profile/HeaderProfil'
 import UserProfil from '../components/profile/UserProfil'
 // import UserTrips from '../components/profile/UserTrips'
-import { TabsComponent } from '../components/tabs/Tabs'
+// import { TabsComponent } from '../components/tabs/Tabs'
 
 // Navigation dans le profil
 
@@ -11,7 +13,8 @@ function ProfileScreen() {
   return (
     <>
       <HeaderProfil />
-      <TabsComponent
+      <UserProfil />
+      {/* <TabsComponent
         views={[
           {
             key: 'first',
@@ -25,7 +28,7 @@ function ProfileScreen() {
           // }
         ]}
         style={{ marginTop: 30 }}
-      />
+      /> */}
     </>
   )
 }

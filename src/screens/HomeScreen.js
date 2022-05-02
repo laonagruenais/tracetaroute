@@ -4,6 +4,7 @@ import ProfilNotCompleteAlert from '../components/alerts/ProfilNotCompleteAlert'
 import { useAuth } from '../contexts/AuthContext'
 import { homeStyle } from '../theme/Styles'
 import _ from 'underscore'
+import Cities from '../components/cities/Cities'
 
 function HomeScreen({ navigation }) {
   const { state } = useAuth()
@@ -30,6 +31,7 @@ function HomeScreen({ navigation }) {
           <Heading style={homeStyle.heading}>
             Hey! {state.user.firstName} 🤙
           </Heading>
+          <Cities />
         </Box>
       </Container>
     </>
