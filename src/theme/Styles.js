@@ -52,6 +52,11 @@ const progressStep = StyleSheet.create({
   text: {
     paddingHorizontal: 10,
     paddingVertical: 20
+  },
+  picture: {
+    width: '100%',
+    opacity: 0.5,
+    height: 100,
   }
 })
 

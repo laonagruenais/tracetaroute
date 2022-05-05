@@ -43,7 +43,6 @@ function HomeScreen({ navigation }) {
           <Heading style={homeStyle.heading}>
             Hey! {state.user.firstName} 🤙
           </Heading>
-          <Cities />
           <activeStep.Component />
           {!activeStep.hideNext && (
             <>

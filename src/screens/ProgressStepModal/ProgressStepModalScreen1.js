@@ -6,25 +6,33 @@ import { getCities } from "../../services/Api";
 import { useAuth } from "../../contexts/AuthContext";
 
 function ProgressStepModalScreen1() {
-  const image = require("../../images/photo/nantes.jpg");
+  const image1 = require("../../images/photo/nantes.jpg");
+  const image2 = require("../../images/photo/paris.jpg");
+  const image3 = require("../../images/photo/lyon.jpg");
+  const images = [image1, image2, image3];
+
   const [cities, setCities] = useState([]);
 
   const { state: { token } } = useAuth()
   useEffect(() => {
     const getCity = async () => {
       const cities = await getCities(token)
-      setCities(cities)
+      setCities(cities.data)
     }
     getCity()
   }, [])
 
   return (
     <View>
-      <ImageBackground source={image}>
-        <Text style={progressStep.text}>ProgressStepModalScreen1</Text>
-        <Text>{JSON.stringify(cities, null, 2)}</Text>
-      </ImageBackground>
-    </View>
+      {
+        cities.map((city, index) => (
+          <ImageBackground key={index} source={images[index]} style={progressStep.picture}>
+            <Text style={progressStep.text}>{city.attributes.Name}</Text>
+            <Text>{index}</Text>
+          </ImageBackground>
+        ))
+      }
+    </View >
   );
 }
 
