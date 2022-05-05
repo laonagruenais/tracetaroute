@@ -48,4 +48,11 @@ const homeStyle = StyleSheet.create({
   }
 })
 
-export { tabBarStyle, loginStyle, homeStyle }
+const progressStep = StyleSheet.create({
+  text: {
+    paddingHorizontal: 10,
+    paddingVertical: 20
+  }
+})
+
+export { tabBarStyle, loginStyle, homeStyle, progressStep }

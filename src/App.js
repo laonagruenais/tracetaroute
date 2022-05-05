@@ -6,10 +6,17 @@ import { SafeAreaView, StatusBar, useColorScheme } from 'react-native'
 import { AuthProvider } from './contexts/AuthContext'
 import Navigator from './navigation/Navigator'
 import { getTheme } from './theme/Theme'
+import { ProgressStepProvider } from './contexts/ProgressStepContext'
 
+const WithContext = () => {
+  return (
+    <ProgressStepProvider>
+      <App />
+    </ProgressStepProvider>
+  )
+}
 
-
-export default function App() {
+const App = () => {
   const isDarkMode = useColorScheme() === 'dark'
 
   const theme = getTheme(isDarkMode)
@@ -43,3 +50,5 @@ export default function App() {
     </SafeAreaView>
   );
 }
+
+export default WithContext

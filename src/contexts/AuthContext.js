@@ -1,8 +1,7 @@
 
 import React, { createContext, useContext, useReducer, useEffect } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-
-import { login } from '../services/api'
+import { loginWithCredentials, registerWithRegistrationCredentials } from '../services/Api'
 
 const AuthContext = createContext()
 
@@ -73,18 +72,15 @@ const useAuth = () => {
 
 const loginUser = async (credentials, dispatch) => {
   try {
-    const data = {
-      token: 'TESTTOKENBIDON',
-      user: { firstName: 'Toto', lastName: 'Tata' }
-    }
+    const data = await loginWithCredentials(credentials)
     dispatch({
       type: actionTypes.LOGIN,
-      data: { user: data.user, token: data.token }
+      data: { user: data.user, token: data.jwt }
     })
   } catch (error) {
     dispatch({
       type: actionTypes.ERROR,
-      data: { error: error.message }
+      data: { error: error }
     })
   }
 }
