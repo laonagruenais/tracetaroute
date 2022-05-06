@@ -14,8 +14,9 @@ function HeaderProfil() {
       <Image
         source={yourPicture}
         alt='Alternate Text' size='xl' borderRadius={100}
+        position='relative'
       />
-      <Text> SALUT </Text>
+      {/* <Text> SALUT </Text> */}
     </Container>
   )
 }

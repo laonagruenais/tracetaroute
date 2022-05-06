@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useMemo } from 'react'
 import ProgressStepModalScreen1 from '../screens/ProgressStepModal/ProgressStepModalScreen1'
 import ProgressStepModalScreen2 from '../screens/ProgressStepModal/ProgressStepModalScreen2'
 import ProgressStepModalScreen3 from '../screens/ProgressStepModal/ProgressStepModalScreen3'
+import ProgressStepModalScreen4 from '../screens/ProgressStepModal/ProgressStepModalScreen4'
 
 const ProgressStepContext = createContext()
 
@@ -25,6 +26,9 @@ export const ProgressStepProvider = ({ children }) => {
     },
     {
       Component: ProgressStepModalScreen3
+    },
+    {
+      Component: ProgressStepModalScreen4
     }
   ]
 

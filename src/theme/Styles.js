@@ -51,12 +51,31 @@ const homeStyle = StyleSheet.create({
 const progressStep = StyleSheet.create({
   text: {
     paddingHorizontal: 10,
-    paddingVertical: 20
+    paddingVertical: 20,
+    backgroundColor: 'rgba(255,255,255,0.5)',
+    height: '100%',
+    textAlign: 'center',
+    fontSize: 40,
   },
   picture: {
     width: '100%',
-    opacity: 0.5,
     height: 100,
+    marginTop: 30,
+    marginLeft: 30,
+  },
+  button: {
+    // marginTop: 30,
+    marginLeft: 60,
+  },
+  box: {
+    width: '100%',
+    backgroundColor: '#DCDCDC',
+    height: 100,
+    marginTop: 30,
+    marginLeft: 30,
+  },
+  boxText: {
+    textAlign: 'center',
   }
 })
 

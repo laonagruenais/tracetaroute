@@ -40,9 +40,9 @@ function HomeScreen({ navigation }) {
         : null}
       <Container w='100%'>
         <Box style={homeStyle.container}>
-          <Heading style={homeStyle.heading}>
+          {/* <Heading style={homeStyle.heading}>
             Hey! {state.user.firstName} 🤙
-          </Heading>
+          </Heading> */}
           <activeStep.Component />
           {!activeStep.hideNext && (
             <>
@@ -61,8 +61,8 @@ function HomeScreen({ navigation }) {
                   <VStack direction='row' space={4} w='100%'>
                     <Box style={{ width: '100%' }}>
                       {activeIndex !== 0 &&
-                        <Button onPress={handleBack}>Retour</Button>}
-                      <Button onPress={handleNext}>Suivant</Button>
+                        <Button onPress={handleBack} style={progressStep.button}>Retour</Button>}
+                      <Button onPress={handleNext} style={progressStep.button}>Suivant</Button>
                     </Box>
                   </VStack>
                 )}

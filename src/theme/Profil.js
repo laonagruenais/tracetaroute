@@ -9,20 +9,17 @@ const styles = StyleSheet.create({
     marginVertical: 12,
     paddingTop: 10
   },
-  tags: {
-    color: '#0284C7',
-    backgroundColor: '#BAE6FD',
-    borderRadius: 2,
-    paddingVertical: 4,
-    paddingHorizontal: 5,
-    maxWidth: 120,
-    marginRight: 4
-  },
+  // tags: {
+  //   color: '#0284C7',
+  //   backgroundColor: '#2D3C4B',
+  //   borderRadius: 2,
+  //   paddingVertical: 4,
+  //   paddingHorizontal: 5,
+  //   maxWidth: 120,
+  //   marginRight: 4
+  // },
   infos: {
     alignItems: 'center'
-  },
-  car: {
-    //
   },
   logout: {
     backgroundColor: 'red',
@@ -31,8 +28,10 @@ const styles = StyleSheet.create({
   centerHeader: {
     maxWidth: '100%',
     alignItems: 'center',
-    backgroundColor: colors.background,
-    padding: 25
+    backgroundColor: '#2D3C4B',
+    padding: 25,
+    position: 'relative',
+    zIndex: 1
   }
 })
 
